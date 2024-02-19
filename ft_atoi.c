@@ -15,25 +15,17 @@
 static int	ft_is_sign(int c)
 {
 	if (c == '-' || c == '+')
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }
 
 static int	ft_overflow_check(int sign)
 {
 	if (sign == 1)
-	{
 		return (-1);
-	}
 	else
-	{
 		return (0);
-	}
 }
 
 int	ft_atoi(const char *str)
