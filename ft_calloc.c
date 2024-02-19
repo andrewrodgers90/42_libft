@@ -19,14 +19,10 @@ void	*ft_calloc(size_t count, size_t size)
 
 	max = -1;
 	if (size && (count > (max / size)))
-	{
 		return (NULL);
-	}
 	new = malloc(count * size);
 	if (!new)
-	{
 		return (0);
-	}
 	ft_bzero(new, count * size);
 	return (new);
 }
