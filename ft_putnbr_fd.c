@@ -36,7 +36,5 @@ void	ft_putnbr_fd(int n, int fd)
 		num /= 10;
 	}
 	while (i > 0)
-	{
 		write(fd, &arr[--i], 1);
-	}
 }
