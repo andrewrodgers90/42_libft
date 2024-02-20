@@ -18,9 +18,7 @@ static char	**ft_freeall(char **arr, int i)
 	{
 		free(arr[i]);
 		if (i == 0)
-		{
 			break ;
-		}
 		i--;
 	}
 	free(arr);
@@ -64,17 +62,11 @@ static int	ft_wordcount(char const *s, char sep)
 	while (*s)
 	{
 		while (*s == sep)
-		{
 			s++;
-		}
 		if (*s)
-		{
 			word_count++;
-		}
 		while (*s && *s != sep)
-		{
 			s++;
-		}
 	}
 	return (word_count);
 }
@@ -87,9 +79,7 @@ char	**ft_split(char const *s, char c)
 	size = ft_wordcount(s, c);
 	new = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!new)
-	{
 		return (0);
-	}
 	new[size] = NULL;
 	return (ft_allocatewords(new, s, c));
 }
