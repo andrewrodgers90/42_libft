@@ -38,12 +38,12 @@ char	*ft_itoa(int n)
 {
 	char	*result;
 	long	num;
-	int		i;
+	int		len;
 	int		is_negative;
 
 	num = n;
-	i = nbr_length(num);
-	result = (char *)malloc(sizeof(char) * (i + 1));
+	len = nbr_length(num);
+	result = (char *)malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return (0);
 	is_negative = 0;
@@ -53,12 +53,12 @@ char	*ft_itoa(int n)
 		num = num * -1;
 		is_negative = 1;
 	}
-	result[i] = '\0';
-	while (i > is_negative)
+	result[len] = '\0';
+	while (len > is_negative)
 	{
-		result[i - 1] = (num % 10) + '0';
+		result[len - 1] = (num % 10) + '0';
 		num /= 10;
-		i--;
+		len--;
 	}
 	return (result);
 }
